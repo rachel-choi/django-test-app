@@ -25,7 +25,7 @@ if '/app' in os.environ['HOME']:
 SECRET_KEY = 'w3ar!h4c*9=iu%(^e+liig63k&76m4_iu)@00570vh%htucjnp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
 
