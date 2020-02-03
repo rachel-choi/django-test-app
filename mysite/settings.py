@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-# import django_heroku
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -120,17 +120,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-
-try:
-    # Configure Django App for Heroku.
-    import django_heroku
-    django_heroku.settings(locals())
-except ImportError:
-    found = False
-
-ALLOWED_HOSTS = ['suggestion-app-0.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 # if '/app' in os.environ['HOME']:
 #     import django_heroku
 #     django_heroku.settings(locals())
+#'suggestion-app-0.herokuapp.com', 'localhost', '127.0.0.1'
