@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		div.a {
+			text-align: center;
+		}
+		h2 {
+			color:white;
+		}
+		#sticky-footer {
+    position:absolute;
+    background:#063;
+    bottom:0px;
+		}
+	</style>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<h2>Please enter a suggestion</h2>
+</nav>
+<div class="a">
+	<form action="{% url 'polls:get_suggestions_list'%}" method="post">
+	  Name:<br>
+	  <input id="name" type="text" name="name">
+	  <br>
+	  Body:<br>
+	  <input id="body" type="text" name="body">
+	  <br><br>
+	  <input type="submit" value="Submit">
+	</form> 
+</div>
+
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Rachel Choi</small>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+<!--  -->

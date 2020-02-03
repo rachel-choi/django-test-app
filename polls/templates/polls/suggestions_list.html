@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div.a {
+		text-align: center;
+	}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="a">
+{% if suggestions %}
+    <ul>
+    {% for suggestion in suggestions %}
+        <li>{{ suggestion.name }}: {{ suggestion.body }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No suggestions are available.</p>
+{% endif %}
+</div>
+</body>
+</html>
